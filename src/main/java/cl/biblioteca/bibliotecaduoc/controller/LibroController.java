@@ -20,7 +20,7 @@ public class LibroController {
         return libroService.obtenerLibros();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("{id}")
     public Libro obtenerPorId(@PathVariable int id) {
         return libroService.buscarPorId(id);
     }
@@ -30,12 +30,12 @@ public class LibroController {
         return libroService.guardar(libro);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("{id}")
     public Libro actualizar(@PathVariable int id, @RequestBody Libro libro) {
         return libroService.actualizar(id, libro);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("{id}")
     public boolean eliminar(@PathVariable int id) {
         return libroService.eliminar(id);
     }
